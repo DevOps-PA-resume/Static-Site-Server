@@ -27,6 +27,7 @@ if first time deploy
 
 edit /etc/nginx/sites-available/mysite with
 
+```
 server {
     listen 80;
     server_name yourdomain.com;   # or use the server's IP if no domain
@@ -38,6 +39,7 @@ server {
         try_files $uri $uri/ =404;
     }
 }
+```
 
 sudo ln -s /etc/nginx/sites-available/mysite /etc/nginx/sites-enabled/
 sudo nginx -t   # test config
